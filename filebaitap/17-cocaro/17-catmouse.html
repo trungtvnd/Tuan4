@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat {
+        name
+        mass
+        speed
+        status
+
+        constructor(name, mass, speed, status) {
+            this.name = name;
+            this.mass = mass;
+            this.speed = speed;
+            this.status = status;
+            this.sound = "chít chít chít chít...";
+        }
+
+        getSound() {
+            return this.status
+        }
+
+        getSpeed() {
+            return this.speed;
+        }
+
+        getMass() {
+            return this.mass;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        setSpeed(speed) {
+            this.speed = speed;
+        }
+
+        setMass(mass) {
+            this.mass = mass;
+        }
+
+        arrested() {
+            this.status = false;
+        }
+
+    }
+
+    class Cat {
+        name
+        mass
+        speed
+        sound
+
+        constructor(name, mass, speed) {
+            this.mass = mass;
+            this.name = name;
+            this.speed = speed;
+            // this.mouse = mouse;
+            this.sound = "Meow meow..Meow meow....."
+        }
+
+        getSound() {
+            return this.sound
+        }
+
+        setSpeed(speed) {
+            this.speed = speed;
+        }
+
+        setMass(mass) {
+            this.mass = mass;
+        }
+
+        goHunting(mouse) {
+            if (mouse.getStatus()) {
+                if (this.speed >= mouse.getSpeed()) {
+                    mouse.arrested();
+                    this.mass += mouse.getMass();
+                    console.log("eat");
+                } else {
+                    console.log("don't catch up");
+                }
+            } else {
+                console.log("no eat");
+            }
+        }
+    }
+
+    let mouse1 = new Rat("mouse1", 2, 12, true);
+    let mouse2 = new Rat("mouse2", 2, 12, false);
+    let mouse3 = new Rat("mouse3", 2, 20, true);
+    let cat = new Cat("cat", 7, 17);
+</script>
+</body>
+</html>
