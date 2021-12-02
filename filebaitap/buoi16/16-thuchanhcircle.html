@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="circle" width="300px" height="150px" style="border: 1px solid"></canvas>
 <script>
     // let Circle = function (radius){
     //     this.radius = radius
@@ -31,10 +32,20 @@
         getArea(){
             return this.radius*Math.PI*this.radius;
         }
+        drawCircle(){
+            let ctx = document.getElementById('circle').getContext("2d")
+            let x = 60
+            let y = 60
+            ctx.beginPath();
+            ctx.arc(x, y, this.radius, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+        }
     }
-let circle = new Circle(3.5) ;
+let circle = new Circle(30) ;
     console.log(circle.getRadius())
     console.log(circle.getArea())
+    circle.drawCircle()
 
 </script>
 </body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CELL PHONE</title>
+
+
+</head>
+<body>
+<h2>CELL PHONE</h2>
+<p id="nokia"></p>
+<p id="iphone"></p>
+<p id="lg"></p>
+<table>
+    <tr>
+        <td  rowspan="2"><button id="status" onclick="onOff()">STATUS</button></td>
+        <td ><button onclick="on()" id="on" >Bật điện thoại</button></td>
+        <td><button id="charging" onclick="charging()">Đang sạc pin</button></td>
+
+    </tr>
+    <tr>
+        <td id="off"><button onclick="off()">Tắt điện thoại</button></td>
+        <td id="usebattery"><button onclick="useBattery()" >Used (hao pin)</button></td>
+    </tr>
+    <tr>
+        <td rowspan="2"><button>MESSAGE</button></td>
+        <td><button  id="newmess" onclick="newMess()">New Message</button></td>
+        <td><button  id="receivemess" onclick="receiveMess()">Receive Message</button></td>
+    </tr>
+    <tr>
+        <td><button id="sentmess" onclick="sentMess()">Sent Message</button></td>
+        <td><button id="checkinbox" onclick="checkInbox()">Check Inbox</button></td>
+        <td><button id="checksent" onclick="checkSent()">Check Sent</button></td>
+    </tr>
+</table>
+</body>
+
+<script src="16-mobie-main.js"></script>
+
+<script src="16-iphone-run.js"></script>
+<!--<script src="16-nokia-run.js"></script>-->
+
+
+</html>
